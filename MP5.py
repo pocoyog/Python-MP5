@@ -4,7 +4,7 @@ import numpy as np
 
 print('        Machine Problem 5 (Python):          ')
 print('Program should be tested using the equation below: ')
-print('                                                  "MPx(np.sin((3*pi*B)/100))" ')
+print('                                                  "MP5x(np.sin((3*pi*B)/100))" ')
 
 B = np.linspace(0,199,200)
 def MP5x(Equationx):
@@ -17,6 +17,7 @@ def MP5x(Equationx):
             Equationy[A] = 0.5*Equationx[A+1] - 0.5*Equationx[A-1]
         elif A == 199:
             Equationy[A] = 1.5*Equationx[A] - 2*Equationx[A-1] + 0.5*Equationx[A-2]
-    mpp.plot(B,Equationx,label = 'Equationx(B)')
-    mpp.plot(B,Equationy,label = 'Equationy(B)')
+    mpp.plot(B,Equationx,label = 'Equationx(B)', color = "blue")
+    mpp.plot(B,Equationy,label = 'Equationy(B)', color = "red")
+    mpp.grid(color='k', linestyle='-')
     mpp.legend()
